@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/themes/default.css">
+    <script type="module" src="https://ka-f.webawesome.com/webawesome@3.12.0/webawesome.loader.js"></script>
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/utilities.css">
+    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/native.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Yousef Abdel Gawad | Portfolio</title>
 </head>
 <body>
     <header>
@@ -14,14 +20,13 @@
             </div>
             <div>
                 <ul class="header_list">
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/" target="_blank">LinkedIn</a></li>
-                    <li><a href="images/CV_Yousef.pdf" target="_blank">Résumé</a></li>
+                    <li><a class="link" href="#aboutMe" data-i18n="aboutMe">About Me</a></li>
+                    <li><a class="link" href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/" target="_blank">LinkedIn </a></li>
+                    <li><a class="link" href="images/CV_Yousef_EN.pdf" target="_blank" data-resume-link data-i18n="resume">Résumé</a></li>
                     <li class="language">
-                        <label for="language">Language</label>
                         <select name="language" id="language">
-                            <option value="Dutch">Dutch</option>
-                        <option value="Dutch">English</option>
+                            <option value="en">English</option>
+                            <option value="nl">Dutch</option>
                         </select>
                     </li>
                 </ul>
@@ -32,32 +37,62 @@
         <section class="info">
             <div class="title_aboutMe">
                 <div class="titel">
-                    <h1>Yousef Abdel Gawad</h1>
+                    <h1>Yousef Abdel Gawad </h1>
                 </div>
                 <div class="aboutMe">
-                    <h2 id="aboutMe">About Me</h2>
+                    <h2 id="aboutMe" data-i18n="aboutMe">About Me</h2>
                     <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quae, magni facere error, facilis alias libero ipsum eaque nemo commodi enim ea doloribus vel ut veniam rerum. Ducimus, debitis cum.</p>
+                    <p data-i18n="aboutText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quae, magni facere error, facilis alias libero ipsum eaque nemo commodi enim ea doloribus vel ut veniam rerum. Ducimus, debitis cum.</p>
                 </div>
             </div>
             <div class="buttons">
                 <div>
-                    <a href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/" target="_blank"><button class="button">Linkedin</button></a>
+                    <a href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/" target="_blank"><button class="button">Linkedin  <wa-icon name="linkedin" family="brands"></wa-icon></button></a>
                 </div>
                 <div>
-                    <a href="images/CV_Yousef.pdf" target="_blank"><button class="button">Résumé</button></a>
+                    <a href="images/CV_Yousef_EN.pdf" target="_blank" data-resume-link><button class="button"><span data-i18n="resume">Résumé</span> <wa-icon name="file"></wa-icon></button></a>
+                </div>
+                <div>
+                    <a href="https://github.com/BousefAg" target="_blank"><button class="button"> Github <wa-icon name="github" family="brands"></wa-icon></button></a>
                 </div>
             </div>
         </section>
         <section class="images">
             <div class="img_container">
-                <img src="https://www.nhm.ac.uk/content/dam/nhm-www/discover/what-is-space/what-is-space-milky-way-full-width.jpg" alt="">
+                <img src="https://www.nhm.ac.uk/content/dam/nhm-www/discover/what-is-space/what-is-space-milky-way-full-width.jpg" alt="sterren">
             </div>
         </section>
     </article>
     <article class="projects_container">
         <section>
-            <h1>Projects</h1>
+            <h1 class="titel" data-i18n="projects">Projects</h1>
+            <div class="projects_grid">
+                <a class="project_card" href="https://38252.hosts2.ma-cloud.nl/MUSE/" target="_blank" rel="noopener noreferrer">
+                    <h2 data-i18n="museumProject">Museum Amsterdam website</h2>
+                    <div class="project_image">
+                        <img src="images/FlamingoJurk.png" alt="Museum Amsterdam website screenshot">
+                    </div>
+                </a>
+                <a class="project_card" href="https://38204.hosts2.ma-cloud.nl/RoomUs/" target="_blank" rel="noopener noreferrer">
+                    <h2 data-i18n="roomUsProject">Pitched company website</h2>
+                    <div class="project_image">
+                        <img src="images/RoomUs.png" alt="RoomUs website screenshot">
+                    </div>
+                </a>
+                <a class="project_card" href="https://38204.hosts2.ma-cloud.nl/skil/NintendoWebshop/" target="_blank" rel="noopener noreferrer">
+                    <h2 data-i18n="nintendoProject">Nintendo webshop project</h2>
+                    <div class="project_image">
+                        <img src="images/Nintendo.png" alt="Nintendo webshop screenshot">
+                    </div>
+                </a>
+                <a class="project_card" href="https://38204.hosts2.ma-cloud.nl/Bo/EersteReactOpdracht/" target="_blank" rel="noopener noreferrer">
+                    <h2 data-i18n="reactProject">First react project</h2>
+                    <div class="project_image">
+                        <img src="images/React.png" alt="React project screenshot">
+                    </div>
+                </a>
+            </div>
         </section>
     </article>
 </body>
