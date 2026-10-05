@@ -1,99 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/themes/default.css">
-    <script type="module" src="https://ka-f.webawesome.com/webawesome@3.12.0/webawesome.loader.js"></script>
-    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/utilities.css">
-    <link rel="stylesheet" href="https://ka-f.webawesome.com/webawesome@3.12.0/styles/native.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Yousef Abdel Gawad | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Yousef Abdel Gawad | Software Developer Portfolio</title>
 </head>
 <body>
-    <header>
-        <div class="header_container">
-            <div>
-                <h1>Yousef Abdel Gawad</h1>
+    <div class="page-wrap">
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="#" class="brand-logo-text">Yousef<span>.nl</span></a>
+                <nav class="main-nav" aria-label="Hoofdnavigatie">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projecten">Projecten</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div>
-                <ul class="header_list">
-                    <li><a class="link" href="#aboutMe" data-i18n="aboutMe">About Me</a></li>
-                    <li><a class="link" href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/" target="_blank">LinkedIn </a></li>
-                    <li><a class="link" href="images/CV_Yousef_EN.pdf" target="_blank" data-resume-link data-i18n="resume">Résumé</a></li>
-                    <li class="language">
-                        <select name="language" id="language">
-                            <option value="en">English</option>
-                            <option value="nl">Dutch</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <article class="info_container">
-        <section class="info">
-            <div class="title_aboutMe">
-                <div class="titel">
-                    <h1>Yousef Abdel Gawad </h1>
-                </div>
-                <div class="aboutMe">
-                    <h2 id="aboutMe" data-i18n="aboutMe">About Me</h2>
-                    <br>
-                    <p data-i18n="aboutText">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quae, magni facere error, facilis alias libero ipsum eaque nemo commodi enim ea doloribus vel ut veniam rerum. Ducimus, debitis cum.</p>
-                </div>
-            </div>
-            <div class="buttons">
-                <div>
-                    <a href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/" target="_blank"><button class="button">Linkedin  <wa-icon name="linkedin" family="brands"></wa-icon></button></a>
-                </div>
-                <div>
-                    <a href="images/CV_Yousef_EN.pdf" target="_blank" data-resume-link><button class="button"><span data-i18n="resume">Résumé</span> <wa-icon name="file"></wa-icon></button></a>
-                </div>
-                <div>
-                    <a href="https://github.com/BousefAg" target="_blank"><button class="button"> Github <wa-icon name="github" family="brands"></wa-icon></button></a>
-                </div>
-            </div>
-        </section>
-        <section class="images">
-            <div class="img_container">
-                <img src="https://www.nhm.ac.uk/content/dam/nhm-www/discover/what-is-space/what-is-space-milky-way-full-width.jpg" alt="sterren">
-            </div>
-        </section>
-    </article>
-    <article class="projects_container">
-        <section>
-            <h1 class="titel" data-i18n="projects">Projects</h1>
-            <div class="projects_grid">
-                <a class="project_card" href="https://38252.hosts2.ma-cloud.nl/MUSE/" target="_blank" rel="noopener noreferrer">
-                    <h2 data-i18n="museumProject">Museum Amsterdam website</h2>
-                    <div class="project_image">
-                        <img src="images/FlamingoJurk.png" alt="Museum Amsterdam website screenshot">
+        </header>
+
+        <main id="home">
+            <section class="hero">
+                <div class="hero-backdrop"></div>
+                <div class="container hero-content">
+                    <p class="eyebrow">Software Developer</p>
+                    <h1>Yousef Abdel Gawad</h1>
+                    <p class="subtitle">Gepassioneerd door het bouwen van moderne, schaalbare en gebruiksvriendelijke webapplicaties met Front-end & Back-end technologieën.</p>
+                    <div class="hero-actions">
+                        <a class="cta-button" href="#projecten">Bekijk mijn werk</a>
+                        <a class="cta-button secondary" href="#contact">Neem contact op</a>
                     </div>
-                </a>
-                <a class="project_card" href="https://38204.hosts2.ma-cloud.nl/RoomUs/" target="_blank" rel="noopener noreferrer">
-                    <h2 data-i18n="roomUsProject">Pitched company website</h2>
-                    <div class="project_image">
-                        <img src="images/RoomUs.png" alt="RoomUs website screenshot">
+                </div>
+            </section>
+
+            <section class="skills" id="skills" aria-labelledby="skills-title">
+                <div class="container">
+                    <div class="skills-heading">
+                        <div>
+                            <p class="eyebrow">Mijn toolkit</p>
+                            <h2 id="skills-title">Programmeertalen &amp; Tools</h2>
+                        </div>
                     </div>
-                </a>
-                <a class="project_card" href="https://38204.hosts2.ma-cloud.nl/skil/NintendoWebshop/" target="_blank" rel="noopener noreferrer">
-                    <h2 data-i18n="nintendoProject">Nintendo webshop project</h2>
-                    <div class="project_image">
-                        <img src="images/Nintendo.png" alt="Nintendo webshop screenshot">
+                    <div class="skills-marquee" aria-label="Programmeertalen en tools">
+                        <div class="skills-track">
+                            <div class="skills-group">
+                                <article class="skill"><i class="devicon-html5-plain" aria-hidden="true"></i><span>HTML5</span></article>
+                                <article class="skill"><i class="devicon-css3-plain" aria-hidden="true"></i><span>CSS3</span></article>
+                                <article class="skill"><i class="devicon-javascript-plain" aria-hidden="true"></i><span>JavaScript</span></article>
+                                <article class="skill"><i class="devicon-php-plain" aria-hidden="true"></i><span>PHP</span></article>
+                                <article class="skill"><i class="devicon-react-original" aria-hidden="true"></i><span>React</span></article>
+                                <article class="skill"><i class="devicon-docker-plain" aria-hidden="true"></i><span>Docker</span></article>
+                                <article class="skill"><i class="devicon-github-original" aria-hidden="true"></i><span>GitHub</span></article>
+                                <article class="skill"><i class="devicon-wordpress-plain" aria-hidden="true"></i><span>WordPress</span></article>
+                                <article class="skill"><i class="devicon-git-plain" aria-hidden="true"></i><span>Git</span></article>
+                            </div>
+                            <div class="skills-group" aria-hidden="true">
+                                <article class="skill"><i class="devicon-html5-plain"></i><span>HTML5</span></article>
+                                <article class="skill"><i class="devicon-css3-plain"></i><span>CSS3</span></article>
+                                <article class="skill"><i class="devicon-javascript-plain"></i><span>JavaScript</span></article>
+                                <article class="skill"><i class="devicon-php-plain"></i><span>PHP</span></article>
+                                <article class="skill"><i class="devicon-react-original"></i><span>React</span></article>
+                                <article class="skill"><i class="devicon-docker-plain"></i><span>Docker</span></article>
+                                <article class="skill"><i class="devicon-github-original"></i><span>GitHub</span></article>
+                                <article class="skill"><i class="devicon-wordpress-plain"></i><span>WordPress</span></article>
+                                <article class="skill"><i class="devicon-git-plain"></i><span>Git</span></article>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a class="project_card" href="https://38204.hosts2.ma-cloud.nl/Bo/EersteReactOpdracht/" target="_blank" rel="noopener noreferrer">
-                    <h2 data-i18n="reactProject">First react project</h2>
-                    <div class="project_image">
-                        <img src="images/React.png" alt="React project screenshot">
+                </div>
+            </section>
+
+            <section class="projects" id="projecten" aria-labelledby="projects-title">
+                <div class="container">
+                    <div class="projects-heading">
+                        <div>
+                            <p class="eyebrow">Geselecteerd werk</p>
+                            <h2 id="projects-title">Mijn Projecten</h2>
+                        </div>
+                        <p>Een selectie van interactieve websites, applicaties en concepten waaraan ik heb gewerkt.</p>
                     </div>
-                </a>
+                    <div class="projects-grid">
+                        <article class="project-card">
+                            <a class="project-image-link" href="https://38252.hosts2.ma-cloud.nl/MUSE/" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="../Oude/images/FlamingoJurk.png" alt="Website voor Museum Amsterdam" loading="lazy">
+                                </div>
+                            </a>
+                            <div class="project-info">
+                                <p class="project-type">Museum Experience</p>
+                                <h3>Website Museum Amsterdam</h3>
+                                <p>Een interactieve ervaring ontwikkeld voor een museumconcept, gericht op toegankelijkheid en visuele presentatie.</p>
+                                <div class="tech-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <a class="project-link" href="https://38252.hosts2.ma-cloud.nl/MUSE/" target="_blank" rel="noopener noreferrer">
+                                    Bekijk project <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <a class="project-image-link" href="https://38204.hosts2.ma-cloud.nl/RoomUs/" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="../Oude/images/RoomUs.png" alt="RoomUs Bedrijfswebsite" loading="lazy">
+                                </div>
+                            </a>
+                            <div class="project-info">
+                                <p class="project-type">Bedrijfsconcept</p>
+                                <h3>RoomUs Platform</h3>
+                                <p>Een professionele landingspagina en platformpresentatie ontworpen voor een gepitcht bedrijfsconcept.</p>
+                                <div class="tech-tags">
+                                    <span>HTML/CSS</span>
+                                    <span>PHP</span>
+                                    <span>UI/UX</span>
+                                </div>
+                                <a class="project-link" href="https://38204.hosts2.ma-cloud.nl/RoomUs/" target="_blank" rel="noopener noreferrer">
+                                    Bekijk project <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <a class="project-image-link" href="https://38204.hosts2.ma-cloud.nl/skil/NintendoWebshop/" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="../Oude/images/Nintendo.png" alt="Nintendo Webshop Project" loading="lazy">
+                                </div>
+                            </a>
+                            <div class="project-info">
+                                <p class="project-type">E-Commerce</p>
+                                <h3>Nintendo E-Shop Concept</h3>
+                                <p>Een dynamische webshop gericht op gaming-artikelen, inclusief productoverzichten en winkelmandfunctionaliteit.</p>
+                                <div class="tech-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <a class="project-link" href="https://38204.hosts2.ma-cloud.nl/skil/NintendoWebshop/" target="_blank" rel="noopener noreferrer">
+                                    Bekijk project <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <a class="project-image-link" href="https://38204.hosts2.ma-cloud.nl/Bo/EersteReactOpdracht/" target="_blank" rel="noopener noreferrer">
+                                <div class="project-image">
+                                    <img src="../Oude/images/React.png" alt="React Applicatie" loading="lazy">
+                                </div>
+                            </a>
+                            <div class="project-info">
+                                <p class="project-type">Web Application</p>
+                                <h3>React Dashboard / App</h3>
+                                <p>Een modern SPA (Single Page Application) project ontwikkeld om component-gebaseerde architectuur en React te meesteren.</p>
+                                <div class="tech-tags">
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                    <span>CSS Modules</span>
+                                </div>
+                                <a class="project-link" href="https://38204.hosts2.ma-cloud.nl/Bo/EersteReactOpdracht/" target="_blank" rel="noopener noreferrer">
+                                    Bekijk project <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact" id="contact" aria-labelledby="contact-title">
+                <div class="container">
+                    <div class="contact-box">
+                        <p class="eyebrow">Samenwerken?</p>
+                        <h2 id="contact-title">Laten we in contact komen</h2>
+                        <p>Ben je op zoek naar een ontwikkelaar voor jouw project of wil je sparren over de mogelijkheden? Neem gerust contact op!</p>
+                        <div class="contact-links">
+                            <a href="mailto:bousefabdel@gmail.com" class="cta-button">Stuur een e-mail</a>
+                            <a href="https://github.com/BousefAg" target="_blank" rel="noopener noreferrer" class="contact-social">GitHub &#8599;</a>
+                            <a href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="contact-social">LinkedIn &#8599;</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2026 Yousef Abdel Gawad. Alle rechten voorbehouden.</p>
             </div>
-        </section>
-    </article>
+        </footer>
+    </div>
 </body>
 </html>
