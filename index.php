@@ -11,7 +11,7 @@
     <div class="page-wrap">
         <header class="site-header">
             <div class="container header-inner">
-                <a href="#" class="brand-logo-text">Yousef<span>.nl</span></a>
+                <a href="#" class="brand-logo-text">YousefAbdelGawad<span>.nl</span></a>
                 <nav class="main-nav" aria-label="Hoofdnavigatie">
                     <ul>
                         <li><a href="#home">Home</a></li>
@@ -29,10 +29,12 @@
                 <div class="container hero-content">
                     <p class="eyebrow">Software Developer</p>
                     <h1>Yousef Abdel Gawad</h1>
-                    <p class="subtitle">Gepassioneerd door het bouwen van moderne, schaalbare en gebruiksvriendelijke webapplicaties met Front-end & Back-end technologieën.</p>
+                    <p class="subtitle">Software Developer in opleiding met een passie voor webdevelopment. Ik leer graag nieuwe technologieën en ben altijd op zoek naar manieren om mezelf verder te ontwikkelen.</p>
                     <div class="hero-actions">
-                        <a class="cta-button" href="#projecten">Bekijk mijn werk</a>
                         <a class="cta-button secondary" href="#contact">Neem contact op</a>
+                        <a class="cta-button primary" href="#projecten">Bekijk mijn werk</a>
+                        <a class="cta-button secondary" href="images/CV_Yousef_NL.pdf" target="_blank">Mijn CV</a>
+
                     </div>
                 </div>
             </section>
@@ -83,11 +85,12 @@
                         </div>
                         <p>Een selectie van interactieve websites, applicaties en concepten waaraan ik heb gewerkt.</p>
                     </div>
+                    <p class="projects-notice" role="note">Let op: sommige oudere projecten zijn niet geoptimaliseerd voor mobiel en kunnen er op een telefoon anders uitzien of minder prettig werken.<br> Voor de beste ervaring raad ik het aan om ze te bekijken op een grotere scherm of om desktopmode in je browser in te schakelen.</p>
                     <div class="projects-grid">
                         <article class="project-card">
                             <a class="project-image-link" href="https://38252.hosts2.ma-cloud.nl/MUSE/" target="_blank" rel="noopener noreferrer">
                                 <div class="project-image">
-                                    <img src="../Oude/images/FlamingoJurk.png" alt="Website voor Museum Amsterdam" loading="lazy">
+                                    <img src="images/FlamingoJurk.png" alt="Website voor Museum Amsterdam" loading="lazy">
                                 </div>
                             </a>
                             <div class="project-info">
@@ -108,7 +111,7 @@
                         <article class="project-card">
                             <a class="project-image-link" href="https://38204.hosts2.ma-cloud.nl/RoomUs/" target="_blank" rel="noopener noreferrer">
                                 <div class="project-image">
-                                    <img src="../Oude/images/RoomUs.png" alt="RoomUs Bedrijfswebsite" loading="lazy">
+                                    <img src="images/RoomUs.png" alt="RoomUs Bedrijfswebsite" loading="lazy">
                                 </div>
                             </a>
                             <div class="project-info">
@@ -129,7 +132,7 @@
                         <article class="project-card">
                             <a class="project-image-link" href="https://38204.hosts2.ma-cloud.nl/skil/NintendoWebshop/" target="_blank" rel="noopener noreferrer">
                                 <div class="project-image">
-                                    <img src="../Oude/images/Nintendo.png" alt="Nintendo Webshop Project" loading="lazy">
+                                    <img src="images/Nintendo.png" alt="Nintendo Webshop Project" loading="lazy">
                                 </div>
                             </a>
                             <div class="project-info">
@@ -150,7 +153,7 @@
                         <article class="project-card">
                             <a class="project-image-link" href="https://38204.hosts2.ma-cloud.nl/Bo/EersteReactOpdracht/" target="_blank" rel="noopener noreferrer">
                                 <div class="project-image">
-                                    <img src="../Oude/images/React.png" alt="React Applicatie" loading="lazy">
+                                    <img src="images/React.png" alt="React Applicatie" loading="lazy">
                                 </div>
                             </a>
                             <div class="project-info">
@@ -168,6 +171,10 @@
                             </div>
                         </article>
                     </div>
+                    <a class="more-projects" href="https://github.com/BousefAg" target="_blank" rel="noopener noreferrer">
+                        <span>Voor meer projecten, klik hier</span>
+                        <span class="more-projects-arrow" aria-hidden="true">&#8599;</span>
+                    </a>
                 </div>
             </section>
 
@@ -176,11 +183,19 @@
                     <div class="contact-box">
                         <p class="eyebrow">Samenwerken?</p>
                         <h2 id="contact-title">Laten we in contact komen</h2>
-                        <p>Ben je op zoek naar een ontwikkelaar voor jouw project of wil je sparren over de mogelijkheden? Neem gerust contact op!</p>
+                        <p>Heb je een idee voor een project, wil je samenwerken of gewoon even overleggen? Stuur me gerust een berichtje. Ik denk graag met je mee!</p>
                         <div class="contact-links">
-                            <a href="mailto:bousefabdel@gmail.com" class="cta-button">Stuur een e-mail</a>
-                            <a href="https://github.com/BousefAg" target="_blank" rel="noopener noreferrer" class="contact-social">GitHub &#8599;</a>
-                            <a href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="contact-social">LinkedIn &#8599;</a>
+                            <a href="mailto:bousefabdel@gmail.com" class="cta-button contactbtn">Stuur een e-mail</a>
+                            <a href="https://github.com/BousefAg" target="_blank" rel="noopener noreferrer" class="contact-social" aria-label="GitHub">
+                                <i class="devicon-github-original" aria-hidden="true"></i>
+                                <span class="contact-social-label">GitHub</span>
+                                <span class="contact-social-arrow" aria-hidden="true">&#8599;</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/yousef-abdel-gawad-128072364/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="contact-social" aria-label="LinkedIn">
+                                <i class="devicon-linkedin-plain" aria-hidden="true"></i>
+                                <span class="contact-social-label">LinkedIn</span>
+                                <span class="contact-social-arrow" aria-hidden="true">&#8599;</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -189,7 +204,7 @@
 
         <footer class="site-footer">
             <div class="container">
-                <p>&copy; 2026 Yousef Abdel Gawad. Alle rechten voorbehouden.</p>
+                <p>copy; 2026 Yousef Abdel Gawad. Alle rechten voorbehouden.</p>
             </div>
         </footer>
     </div>

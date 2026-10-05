@@ -62,9 +62,15 @@ ul {
 }
 
 .main-nav a {
-    color: #222222;
+    color: #365c45;
     font-size: 16px;
     font-weight: 600;
+    transition: color 180ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: #222222;
 }
 
 .hero {
@@ -79,10 +85,10 @@ ul {
 .hero-backdrop {
     position: absolute;
     inset: 0;
-    background-image: url('images/Minimalist Coder in Sunlit Workspace.png');
+    background-image: url('images/hero.png');
     background-position: center;
     background-size: cover;
-    opacity: 0.65;
+    opacity: 0.5;
 }
 
 .hero-content {
@@ -121,10 +127,11 @@ ul {
     justify-content: center;
     padding: 14px 24px;
     border-radius: 4px;
-    background: #f4b942;
-    color: #161616;
     font-weight: 700;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
+
+
 
 .skills {
     padding: 48px 0 52px;
@@ -197,11 +204,12 @@ ul {
 
 .skill i {
     font-size: 38px;
+    color: #365c45;
 }
 
 .projects {
     padding: 72px 0 88px;
-    background: #ffffff;
+    background: #f3f7ef;
 }
 
 .projects-heading {
@@ -232,6 +240,17 @@ ul {
     line-height: 1.5;
 }
 
+.projects-notice {
+    margin: -10px 0 24px;
+    padding: 12px 16px;
+    border-left: 3px solid #759e54;
+    border-radius: 0 4px 4px 0;
+    background: #e7f0e1;
+    color: #365c45;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -243,9 +262,9 @@ ul {
     min-width: 0;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid #e0e5e1;
+    border: 1px solid #d2dfcb;
     border-radius: 6px;
-    background: #ffffff;
+    background: #fbfdf9;
     color: #222222;
     transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
@@ -306,7 +325,6 @@ ul {
 .project-card:focus-visible {
     transform: translateY(-3px);
     border-color: #8da997;
-    box-shadow: 0 12px 28px rgba(38, 59, 48, 0.1);
 }
 
 .project-card:hover .project-image img,
@@ -319,16 +337,50 @@ ul {
     outline-offset: 3px;
 }
 
+.more-projects {
+    display: flex;
+    min-height: 76px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 18px 24px;
+    border: 1px solid #365c45;
+    border-radius: 6px;
+    background: #365c45;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.more-projects:hover {
+    transform: translateY(-2px);
+    background: #263b30;
+}
+
+.more-projects:focus-visible {
+    outline: 2px solid #263b30;
+    outline-offset: 3px;
+}
+
+.more-projects-arrow {
+    font-size: 20px;
+}
+
 @media (max-width: 700px) {
     .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
         height: auto;
-        min-height: 72px;
+        gap: 4px;
+        padding: 12px 0;
     }
 
     .main-nav ul {
         flex-wrap: wrap;
-        gap: 12px 18px;
-        padding: 16px 0;
+        gap: 10px 18px;
+        padding: 8px 0 4px;
     }
 
     .main-nav a {
@@ -336,15 +388,49 @@ ul {
     }
 
     .hero {
-        height: 440px;
+        height: auto;
+        min-height: 440px;
+    }
+
+    .hero-content {
+        width: calc(100% - 48px);
+        max-width: 600px;
+        padding: 56px 0;
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: clamp(28px, 8vw, 40px);
     }
 
     .subtitle {
-        width: auto;
+        width: 100%;
+        max-width: 520px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 18px;
+    }
+
+    .hero .hero-content .hero-actions {
+        display: grid;
+        width: min(100%, 420px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .hero .hero-content .hero-actions .cta-button {
+        width: 100%;
+        min-width: 0;
+        padding: 12px 10px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .hero .hero-content .hero-actions .cta-button.primary {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        padding: 14px 18px;
     }
 
     .skills-heading h2 {
@@ -366,13 +452,168 @@ ul {
         font-size: 30px;
     }
 
+    .projects-notice {
+        margin: -8px 0 18px;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .project-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .project-info {
+        padding: 14px;
+    }
+
+    .project-type {
+        font-size: 10px;
+        letter-spacing: 0.3px;
+    }
+
+    .project-info h3 {
+        font-size: 18px;
+    }
+
+    .project-info > p:not(.project-type) {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        margin-bottom: 14px;
+        font-size: 14px;
+    }
+
+    .tech-tags {
+        gap: 6px;
+        margin-bottom: 14px;
+    }
+
+    .tech-tags span {
+        padding: 3px 7px;
+        font-size: 10px;
+    }
+
+    .project-link {
+        font-size: 12px;
+    }
+
+    .more-projects {
+        min-height: 64px;
+        margin-top: 18px;
+        padding: 14px 18px;
+        font-size: 15px;
+    }
+
+    .contact {
+        padding: 56px 0;
+    }
+
+    .contact-box h2 {
+        font-size: 30px;
+    }
+
+    .contact-links {
+        gap: 14px;
+    }
+
+    .contact-social {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
     }
 
     .skills-track {
         animation-duration: 26s;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .brand-logo-text {
+        font-size: 20px;
+    }
+
+    .main-nav ul {
+        gap: 8px 14px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .projects-grid {
+        gap: 10px;
+    }
+
+    .project-info {
+        padding: 11px;
+    }
+
+    .project-info h3 {
+        font-size: 16px;
+    }
+
+    .project-info > p:not(.project-type) {
+        font-size: 13px;
+    }
+
+    .tech-tags span {
+        padding: 3px 6px;
+    }
+
+    .hero .hero-actions .cta-button {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .hero .hero-actions .cta-button.primary {
+        padding: 12px 16px;
+    }
+
+    .contact-links {
+        display: grid;
+        grid-template-columns: repeat(2, 48px);
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .contact-links .contactbtn {
+        grid-column: 1 / -1;
+    }
+
+    .contact-links .contact-social {
+        width: 48px;
+        min-height: 48px;
+        padding: 0;
+        border-radius: 50%;
+        font-size: 0;
+    }
+
+    .contact-links .contact-social i {
+        font-size: 22px;
+    }
+
+    .contact-social-label,
+    .contact-social-arrow {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        clip-path: inset(50%);
     }
 }
 
@@ -407,14 +648,45 @@ ul {
     flex-wrap: wrap;
 }
 
-.cta-button.secondary {
-    background: transparent;
-    border: 2px solid #ffffff;
+.cta-button:hover{
+    background: #365c45;
     color: #ffffff;
 }
 
-.cta-button.secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+.hero-actions .cta-button.primary {
+    padding: 16px 26px;
+    background: #365c45;
+    color: #ffffff;
+}
+
+.hero-actions .cta-button.primary:hover {
+    background: #263b30;
+    color: #ffffff;
+}
+
+.hero-actions .cta-button:focus-visible {
+    outline: 2px solid #d6ead0;
+    outline-offset: 4px;
+}
+
+.cta-button.secondary {
+    background: #759e54;
+    color: #1f382b;
+}
+
+.hero-actions .cta-button.secondary:hover {
+    background: #b7d1a1;
+    color: #1f382b;
+}
+
+.cta-button.contactbtn {
+    background: #759e54;
+    color: #1f382b;
+}
+
+.cta-button.contactbtn:hover {
+    background: #b7d1a1;
+    color: #1f382b;
 }
 
 /* Tech Tags op Projectkaarten */
@@ -427,7 +699,7 @@ ul {
 
 .tech-tags span {
     padding: 4px 10px;
-    background: #f0f4f1;
+    background: #e7f0e1;
     color: #365c45;
     font-size: 12px;
     font-weight: 600;
@@ -437,8 +709,9 @@ ul {
 /* Contact Sectie */
 .contact {
     padding: 88px 0;
-    background: #f4f6f5;
+    background: #365c45;
     text-align: center;
+    color: #ffffff;
 }
 
 .contact-box {
@@ -452,7 +725,7 @@ ul {
 }
 
 .contact-box p {
-    color: #666666;
+    color: #e4eee0;
     margin-bottom: 32px;
     line-height: 1.6;
 }
@@ -466,16 +739,36 @@ ul {
 }
 
 .contact-social {
-    color: #365c45;
+    color: #52715f;
+    background-color: #d6ead0;
+    padding: 8px 12px;
+    border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
+}
+
+.contact-social i {
+    font-size: 18px;
+}
+
+.contact-social:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
 }
 
 /* Footer */
 .site-footer {
     padding: 24px 0;
+    border-top: 3px solid #a8ca8d;
     background: #263238;
-    color: #aaaaaa;
+    color: #d6ead0;
     text-align: center;
     font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .contact {
+        padding: 56px 0;
+    }
+
 }
