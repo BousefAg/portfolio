@@ -1,0 +1,62 @@
+<?php
+$projects = [
+    'museum' => [
+        'type' => 'Interactieve expositie',
+        'title' => 'Flamingo Jurk – Amsterdam Museum',
+        'image' => 'images/FlamingoJurk.png',
+        'detail_image' => 'images/FlamingoJurk.png',
+        'detail_alt' => 'Interactieve expositie van de Flamingo Jurk van David Laport',
+        'gallery' => [
+            [
+                'image' => 'images/FlamingoJurk-Installatie.png',
+                'alt' => 'De Flamingo Jurk op het rode draaiplateau tussen de spotlight-camera’s',
+                'caption' => 'De installatie met de jurk, het draaiplateau en de spotlights.',
+            ],
+            [
+                'image' => 'images/FlamingoJurk-Concept.png',
+                'alt' => 'Schets van het expositieconcept met de jurk op een draaiplateau en spotlights aan weerszijden',
+                'caption' => 'Schets van het expositieconcept.',
+            ],
+        ],
+        'alt' => 'Interactieve expositie van de Flamingo Jurk van David Laport',
+        'summary' => 'Een website en interactieve fysieke installatie rond de iconische Flamingo Jurk (David Laport, 2018), met een roterend platform en instelbare spotlight-camera’s.',
+        'details' => 'Mijn belangrijkste taken bij dit project waren het programmeren van de Arduino en het aansluiten van de hardware. Met FastLED programmeerde ik de LED-strip voor flits- en paparazzieffecten. Ook werkte ik met een ultrasone sensor die bezoekers in de buurt detecteert, en met een motor die de paspop laat draaien. Tijdens het project liep ik tegen problemen aan met de LED-strip en de motor. De motor had veel stroom nodig, waardoor andere onderdelen niet goed werkten. Ook werd de motor warm wanneer hij op een constante snelheid draaide. Ik probeerde verschillende oplossingen om de hardware stabiel te laten werken, maar ik had helaas niet de onderdelen nodig om de motor werkent te krijgen.',
+        'contribution' => 'Ik werkte aan de Arduino en de hardware-integratie. Met FastLED programmeerde ik de LED-strip voor de lichteffecteSSn en gebruikte ik een ultrasone sensor om bezoekers dichtbij te detecteren en werkte ik met een motor.',
+        'learning' => 'Ik leerde hoe je aan de slag moet gaan met grote motors, ook leerde ik problemen met de LED-strip en de timing stap voor stap te onderzoeken en verschillende oplossingen te proberen. Ook merkte ik hoe belangrijk het is dat de hardware en software goed samenwerken.',
+        'technologies' => ['Arduino', 'C++','Hardware-integratie', 'HTML', 'CSS', 'JavaScript'],
+        'url' => 'https://38252.hosts2.ma-cloud.nl/MUSE/',
+    ],
+    'roomus' => [
+        'type' => 'Bedrijfsconcept',
+        'title' => 'RoomUs Platform',
+        'image' => 'images/RoomUs.png',
+        'alt' => 'RoomUs bedrijfswebsite',
+        'summary' => 'Een landingspagina en platformpresentatie voor een gepitcht bedrijfsconcept.',
+        'details' => 'Voor een nieuw bedrijf, RoomUs (een platform gericht op het vinden van woonruimtes en huisgenoten), heb ik een concept-website ontworpen en ontwikkeld. Mijn taak was om een visueel thema en een prototype neer te zetten dat het bedrijf kon beoordelen voor hun uiteindelijke, live website. Hierbij was ik verantwoordelijk voor het volledige proces: van UI/UX-ontwerp tot de front-end realisatie. De focus lag op een strakke, moderne uitstraling en een intuïtieve gebruikerservaring die aansluit bij de doelgroep.',
+        'learning' => 'Tijdens dit project heb ik waardevolle ervaring opgedaan met het ontwerpen voor een externe klant. Ik heb geleerd hoe ik merkwaarden van een nieuw concept vertaal naar een concreet UI/UX-design dat zowel visueel aantrekkelijk als functioneel is. Daarnaast heeft dit project mij geholpen om schoner te coderen in HTML/CSS/JS, met extra aandacht voor responsiviteit en een logische gebruikersstructuur.',
+        'technologies' => ['HTML', 'CSS', 'Javascript', 'UI/UX'],
+        'url' => 'https://38204.hosts2.ma-cloud.nl/RoomUs/',
+    ],
+    'nintendo' => [
+        'type' => 'E-Commerce',
+        'title' => 'Nintendo E-Shop Concept',
+        'image' => 'images/Nintendo.png',
+        'alt' => 'Nintendo webshopconcept',
+        'summary' => 'Mijn eerste grote project waarin ik mijn programmeerkennis samenbracht om een complete webshop te bouwen.',
+        'details' => 'Voor dit project heb ik een concept gemaakt voor een Nintendo E-Shop, waar bezoekers verschillende gamingproducten kunnen bekijken, in hun winkelmandje kunnen stoppen en door de webshop kunnen navigeren. Dit was mijn eerste grote project waarbij ik mijn kennis van HTML, CSS en JavaScript in de praktijk moest toepassen. Ik heb de website zelf opgebouwd en gewerkt aan de structuur, de vormgeving en de interactieve onderdelen. Het was een leuke opdracht, omdat ik voor de eerste keer echt hard aan het werk kon met mijn nieuw geleerde skills.',
+        'learning' => 'Dit project heeft mij geholpen om mijn kennis van HTML, CSS en JavaScript beter te begrijpen en toe te passen. Omdat het mijn eerste grote project was, moest ik zelf uitzoeken hoe ik verschillende onderdelen van de website het beste kon opbouwen en met elkaar kon laten samenwerken. Ik heb geleerd hoe belangrijk het is om mijn code goed te structureren, mijn ontwerp stap voor stap uit te werken en problemen zelf op te lossen. Het project gaf mij ook meer vertrouwen om grotere websites te bouwen en motiveerde mij om verder te leren over webdevelopment.',
+        'technologies' => ['HTML', 'CSS', 'JavaScript'],
+        'url' => 'https://38204.hosts2.ma-cloud.nl/skil/NintendoWebshop/',
+    ],
+    'react' => [
+        'type' => 'Web Application',
+        'title' => 'Mijn Eerste React App',
+        'image' => 'images/React.png',
+        'alt' => 'Mijn React-applicatie met verschillende onderdelen',
+        'summary' => 'Mijn eerste project met React, met onder andere een klok, Cookie Clicker, Pokémon API en verschillende andere secties.',
+        'details' => 'Voor dit project heb ik mijn eerste webapplicatie met React gemaakt. De applicatie bestaat uit verschillende onderdelen, waaronder een werkende klok, een Cookie Clicker-game, een Pokémon-sectie, een Top 10 en een About Me-pagina. Voor de Pokémon-sectie heb ik een API gebruikt om informatie over Pokémon op te halen en op de website weer te geven. Bij de Cookie Clicker heb ik gewerkt aan de interactie, waarbij je punten kunt verzamelen en upgrades kunt kopen. Met dit project wilde ik ontdekken hoe React werkt en leren hoe ik verschillende onderdelen kan combineren in één webapplicatie.',
+        'learning' => 'Dit was mijn eerste keer werken met React, waardoor ik tijdens het project veel nieuwe dingen heb geleerd. Ik heb geleerd hoe ik componenten kan gebruiken om mijn applicatie in verschillende onderdelen op te delen en hoe ik deze onderdelen interactief kan maken. Ook heb ik ervaring opgedaan met het gebruiken van een API om Pokémon-informatie op te halen en weer te geven op mijn website. Daarnaast heb ik geleerd hoe ik verschillende functies, zoals een klok en een clicker-game, in één applicatie kan combineren. Dit project heeft mij geholpen om React beter te begrijpen en geeft mij een goede basis om er verder mee te werken.',
+        'technologies' => ['React', 'CSS Modules', 'JavaScript'],
+        'url' => 'https://38204.hosts2.ma-cloud.nl/Bo/EersteReactOpdracht/',
+    ]
+];
