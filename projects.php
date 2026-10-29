@@ -17,7 +17,7 @@ require __DIR__ . '/includes/header.php';
         <div class="projects-grid">
             <?php foreach ($projects as $projectId => $project): ?>
                 <article class="project-card">
-                    <a class="project-image-link" href="project.php?project=<?= rawurlencode($projectId) ?>" aria-label="Bekijk details van <?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?>">
+                    <a class="project-image-link" href="project?project=<?= rawurlencode($projectId) ?>" aria-label="Bekijk details van <?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?>">
                         <div class="project-image">
                             <img src="<?= htmlspecialchars($project['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($project['alt'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
                         </div>
@@ -31,7 +31,7 @@ require __DIR__ . '/includes/header.php';
                                 <span><?= htmlspecialchars($technology, ENT_QUOTES, 'UTF-8') ?></span>
                             <?php endforeach; ?>
                         </div>
-                        <a class="project-link" href="project.php?project=<?= rawurlencode($projectId) ?>">
+                        <a class="project-link" href="project?project=<?= rawurlencode($projectId) ?>">
                             Bekijk details <span aria-hidden="true">&#8594;</span>
                         </a>
                     </div>

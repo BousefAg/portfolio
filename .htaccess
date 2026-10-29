@@ -1,0 +1,15 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteRule ^(projects|contact|project)/?$ index.php?route=$1 [QSA,L]
+
+<FilesMatch "^(projects-data|header|footer)\.php$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

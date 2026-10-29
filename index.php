@@ -1,4 +1,21 @@
 <?php
+$route = $_GET['route'] ?? '';
+if (!is_string($route) || $route === '') {
+    $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+    $route = is_string($requestPath) ? basename(rtrim($requestPath, '/')) : '';
+}
+
+$routeFiles = [
+    'projects' => 'projects.php',
+    'contact' => 'contact.php',
+    'project' => 'project.php',
+];
+
+if (isset($routeFiles[$route])) {
+    require __DIR__ . '/' . $routeFiles[$route];
+    return;
+}
+
 $pageTitle = 'Yousef Abdel Gawad | Software Developer Portfolio';
 $activePage = 'home';
 require __DIR__ . '/projects-data.php';
@@ -12,8 +29,8 @@ require __DIR__ . '/includes/header.php';
             <h1>Yousef Abdel Gawad</h1>
             <p class="subtitle">Ik bouw websites en applicaties en blijf mezelf ontwikkelen.</p>
             <div class="hero-actions">
-                <a class="cta-button primary" href="projects.php">Bekijk mijn projecten</a>
-                <a class="cta-button secondary" href="contact.php">Contact</a>
+                <a class="cta-button primary" href="projects">Bekijk mijn projecten</a>
+                <a class="cta-button secondary" href="contact">Contact</a>
                 <a class="cta-button secondary" href="images/CV_Yousef_NL.pdf" target="_blank" rel="noopener noreferrer">Mijn CV</a>
             </div>
         </div>
@@ -66,12 +83,12 @@ require __DIR__ . '/includes/header.php';
                     <p class="eyebrow">Een greep uit mijn werk</p>
                     <h2 id="featured-title">Uitgelichte projecten</h2>
                 </div>
-                <a class="all-projects-link" href="projects.php">Bekijk alle projecten <span aria-hidden="true">&rarr;</span></a>
+                <a class="all-projects-link" href="projects">Bekijk alle projecten <span aria-hidden="true">&rarr;</span></a>
             </div>
             <div class="projects-grid">
                 <?php foreach (array_slice($projects, 0, 2, true) as $projectId => $project): ?>
                     <article class="project-card">
-                        <a class="project-image-link" href="project.php?project=<?= rawurlencode($projectId) ?>" aria-label="Bekijk details van <?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?>">
+                        <a class="project-image-link" href="project?project=<?= rawurlencode($projectId) ?>" aria-label="Bekijk details van <?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?>">
                             <div class="project-image">
                                 <img src="<?= htmlspecialchars($project['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($project['alt'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
                             </div>
@@ -80,7 +97,7 @@ require __DIR__ . '/includes/header.php';
                             <p class="project-type"><?= htmlspecialchars($project['type'], ENT_QUOTES, 'UTF-8') ?></p>
                             <h3><?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?></h3>
                             <p><?= htmlspecialchars($project['summary'], ENT_QUOTES, 'UTF-8') ?></p>
-                            <a class="project-link" href="project.php?project=<?= rawurlencode($projectId) ?>">
+                            <a class="project-link" href="project?project=<?= rawurlencode($projectId) ?>">
                                 Bekijk details <span aria-hidden="true">&rarr;</span>
                             </a>
                         </div>

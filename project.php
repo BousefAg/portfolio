@@ -21,35 +21,23 @@ require __DIR__ . '/includes/header.php';
                 <p class="eyebrow">404</p>
                 <h1>Project niet gevonden</h1>
                 <p>Dit project bestaat niet (meer) in mijn portfolio.</p>
-                <a class="cta-button primary" href="projects.php">Terug naar projecten</a>
+                <a class="cta-button primary" href="projects">Terug naar projecten</a>
             </section>
         <?php else: ?>
-            <a class="back-link" href="projects.php">&larr; Alle projecten</a>
+            <a class="back-link" href="projects">&larr; Alle projecten</a>
             <div class="project-detail">
                 <div class="project-detail-copy">
                     <p class="eyebrow"><?= htmlspecialchars($project['type'], ENT_QUOTES, 'UTF-8') ?></p>
                     <h1><?= htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8') ?></h1>
-                    <p class="project-detail-summary"><?= htmlspecialchars($project['details'], ENT_QUOTES, 'UTF-8') ?></p>
-                    <?php if (isset($project['contribution']) || isset($project['learning'])): ?>
-                        <?php $hasBothReflections = isset($project['contribution'], $project['learning']); ?>
-                        <section class="project-reflection" aria-labelledby="project-reflection-title">
-                            <h2 id="project-reflection-title"><?= $hasBothReflections ? 'Mijn bijdrage en wat ik heb geleerd' : (isset($project['learning']) ? 'Wat ik heb geleerd' : 'Mijn bijdrage') ?></h2>
-                            <div class="project-reflection-grid<?= $hasBothReflections ? '' : ' single-column' ?>">
-                                <?php if (isset($project['contribution'])): ?>
-                                    <div>
-                                        <?php if ($hasBothReflections): ?><h3>Mijn bijdrage</h3><?php endif; ?>
-                                        <p><?= htmlspecialchars($project['contribution'], ENT_QUOTES, 'UTF-8') ?></p>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if (isset($project['learning'])): ?>
-                                    <div>
-                                        <?php if ($hasBothReflections): ?><h3>Wat ik heb geleerd</h3><?php endif; ?>
-                                        <p><?= htmlspecialchars($project['learning'], ENT_QUOTES, 'UTF-8') ?></p>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-                        </section>
-                    <?php endif; ?>
+                    <p class="project-detail-summary"><?= htmlspecialchars($project['summary'], ENT_QUOTES, 'UTF-8') ?></p>
+                    <div class="project-story">
+                        <?php foreach ($project['sections'] as $section): ?>
+                            <section class="project-story-section">
+                                <h2><?= htmlspecialchars($section['heading'], ENT_QUOTES, 'UTF-8') ?></h2>
+                                <p><?= htmlspecialchars($section['text'], ENT_QUOTES, 'UTF-8') ?></p>
+                            </section>
+                        <?php endforeach; ?>
+                    </div>
                     <h2>Gebruikte technologieën</h2>
                     <div class="tech-tags" aria-label="Gebruikte technologieën">
                         <?php foreach ($project['technologies'] as $technology): ?>
